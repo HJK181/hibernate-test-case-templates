@@ -84,6 +84,7 @@ class JPAUnitTestCase {
 		public boolean removeB(B b) {
 			var removed = bs.remove(b);
 			b.setA(null);
+			b.getC().setB(null);
 			variantCount -= 1;
 			return removed;
 		}
